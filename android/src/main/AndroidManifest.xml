@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.canyou.flu_ding">
+  <application>
+    <activity
+        android:exported="true"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar"
+        android:launchMode="singleTask"
+        android:taskAffinity="${applicationId}"
+        android:name="com.canyou.DTShareKit.ddshare.DDShareActivity">
+    </activity>
+  </application>
+</manifest>

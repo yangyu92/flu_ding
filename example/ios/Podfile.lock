@@ -1,0 +1,25 @@
+PODS:
+  - flu_ding (0.0.1):
+    - flu_ding/vendor (= 0.0.1)
+    - Flutter
+  - flu_ding/vendor (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - flu_ding (from `.symlinks/plugins/flu_ding/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  flu_ding:
+    :path: ".symlinks/plugins/flu_ding/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  flu_ding: 7a3ca2f78d86c64be4c4c10ea87a904dda6bf47d
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+
+PODFILE CHECKSUM: 3aaee2e660a2a825e7c3beecb0e4a334b934f851
+
+COCOAPODS: 1.10.1
