@@ -11,9 +11,7 @@
 }
 
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
-    if ([@"getPlatformVersion" isEqualToString:call.method]) {
-        result([@"iOS " stringByAppendingString:[[UIDevice currentDevice] systemVersion]]);
-    } else if ([@"registerApp" isEqualToString:call.method]) {
+    if ([@"registerApp" isEqualToString:call.method]) {
         [self registerApp: call result:result];
     } else if ([@"openAPIVersion" isEqualToString:call.method]) {
         NSString *version = [DTOpenAPI openAPIVersion];
@@ -38,7 +36,7 @@
         result([FlutterError errorWithCode:@"invalid app id" message:@"are you sure your app id is correct ? " details:appId]);
         return;
     }
-    // 注册AppId;
+    // register AppId;
     BOOL isSupport = [DTOpenAPI registerApp:appId];
     result(@(isSupport));
 }

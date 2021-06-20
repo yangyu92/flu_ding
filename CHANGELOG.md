@@ -1,3 +1,11 @@
+## NEXT
+
+* 添加钉钉登录, 钉钉分享
+
+## 0.0.1+1
+
+* 更新文档说明
+
 ## 0.0.1
 
-* TODO: Describe initial release.
+* dingtalk SDK flutter应用

@@ -14,7 +14,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
+  String _dingtalkVersion = 'Unknown';
 
   @override
   void initState() {
@@ -22,32 +22,20 @@ class _MyAppState extends State<MyApp> {
     initPlatformState();
   }
 
-  // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
-    String platformVersion;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    // We also handle the message potentially returning null.
+    String dingtalkVersion;
     try {
-      platformVersion =
+      dingtalkVersion =
           await FluDing.openAPIVersion ?? 'Unknown platform version';
       bool isSupport = await FluDing.registerApp("dingu6xwfjbghhqtwwzu");
       print("注册成功: $isSupport");
-      bool isDingTalkInstalled = await FluDing.isDingTalkInstalled;
-      print("是否安装了钉钉: $isDingTalkInstalled");
-      bool isDingTalkSupportSSO = await FluDing.isDingTalkSupportSSO;
-      print("是否支持登录: $isDingTalkSupportSSO");
-      FluDing.openDingTalk.then((value) => print("打开钉钉App: $value"));
     } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
+      dingtalkVersion = 'Failed to get platform version.';
     }
-
-    // If the widget was removed from the tree while the asynchronous platform
-    // message was in flight, we want to discard the reply rather than calling
-    // setState to update our non-existent appearance.
     if (!mounted) return;
 
     setState(() {
-      _platformVersion = platformVersion;
+      _dingtalkVersion = dingtalkVersion;
     });
   }
 
@@ -56,10 +44,38 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: const Text('Dingtalk SDK Demo'),
         ),
         body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('dingtalkVersion: $_dingtalkVersion\n'),
+              TextButton(
+                onPressed: () {
+                  FluDing.isDingTalkInstalled.then((value) {
+                    print("是否安装了钉钉: $value");
+                  });
+                },
+                child: Text('DingTalkInstalled'),
+              ),
+              TextButton(
+                onPressed: () {
+                  FluDing.isDingTalkSupportSSO.then((value) {
+                    print("是否支持登录: $value");
+                  });
+                },
+                child: Text('isDingTalkSupportSSO'),
+              ),
+              TextButton(
+                onPressed: () {
+                  FluDing.openDingTalk
+                      .then((value) => print("打开钉钉App: $value"));
+                },
+                child: Text('openDingTalk'),
+              )
+            ],
+          ),
         ),
       ),
     );
