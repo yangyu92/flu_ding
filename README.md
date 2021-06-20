@@ -1,11 +1,11 @@
-# Flu_ding
+# flu_ding
 
 ![pub package](https://img.shields.io/pub/v/flu_ding.svg)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](./doc/QA_CN.md)
 
-## 什么是Flu_ding
+## 什么是flu_ding
 
-`Flu_ding` 是一个[钉钉SDK](https://developers.dingtalk.com/document/mobile-app-guide)插件，它允许开发者调用
+`flu_ding` 是一个[钉钉SDK](https://developers.dingtalk.com/document/mobile-app-guide)插件，它允许开发者调用
 [钉钉原生SDK](https://developers.weixin.qq.com/doc/oplatform/Mobile_App/Resource_Center_Homepage.html).
 
 ## android
@@ -18,8 +18,6 @@ buildscript {
     }
 }
 ```
-
-` 混淆已打入 Library，随 Library 引用，自动添加到 apk 打包混淆 `
 
 ## ios
 
@@ -37,12 +35,15 @@ iOS 9系统策略更新，限制了http协议的访问，此外应用需要在�
   <string>dingtalk</string>
   <string>dingtalk-open</string>
   <string>dingtalk-sso</string>
-  </array>
+</array>
 ```
 
 ## flutter
 
-  flutter2.2.2 nullsafety
+  Flutter 2.2.2 • channel stable nullsafety
+  Framework • revision d79295af24 (9 days ago) • 2021-06-11 08:56:01 -0700
+  Engine • revision 91c9fc8fe0
+  Tools • Dart 2.13.3
 
 ## 能力
 
@@ -52,21 +53,17 @@ iOS 9系统策略更新，限制了http协议的访问，此外应用需要在�
 
 ## 准备
 
-`Flu_ding` 可以做很多工作但不是所有. 在集成之前，最好读一下[官方文档](https://developers.dingtalk.com/document/mobile-app-guide).  
+`flu_ding` 可以做很多工作但不是所有. 在集成之前，最好读一下[官方文档](https://developers.dingtalk.com/document/mobile-app-guide).  
  然后你才知道怎么生成签名，怎么使用universal link以及怎么添加URL schema等.
 
 ## 安装
 
-在`pubspec.yaml` 文件中添加`Flu_ding`依赖:
+在`pubspec.yaml` 文件中添加`flu_ding`依赖:
 
 ```yaml
 dependencies:
-  Flu_ding: ^${latestVersion}
+  flu_ding: ^0.0.1
 ```
-
-![pub package](https://img.shields.io/pub/v/fluwx.svg)
-
-> NOTE: 别忘记替换 ^${latestVersion} ！！！！
 
 ## 注册 WxAPI
 

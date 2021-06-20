@@ -1,7 +1,7 @@
 name: flu_ding
-description: A new flutter plugin project.
+description: A powerful Flutter plugin allowing developers to auth/share with natvie Android & iOS Dingtalk SDKs.
 version: 0.0.1
-homepage: https://www.yymimang.cn
+homepage: https://github.com/yangyu92/flu_ding
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
