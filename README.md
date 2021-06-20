@@ -8,6 +8,8 @@
 `flu_ding` Is a [Dingtalk nailing SDK](https://developers.dingtalk.com/document/mobile-app-guide) plug-in, which allows developers to invoke
 [Nail the native SDK](https://developers.weixin.qq.com/doc/oplatform/Mobile_App/Resource_Center_Homepage.html).
 
+[中文请移步此处](./README_CN.md)
+
 ## Installation
 
 'flu_ding' dependency to the 'pubspec.yaml' file:
@@ -48,10 +50,12 @@ IOS 9 system policy update restricts HTTP protocol access. In addition, applicat
 
 ## flutter
 
+``` text
   Flutter 2.2.2 • channel stable nullsafety
   Framework • revision d79295af24 (9 days ago) • 2021-06-11 08:56:01 -0700
   Engine • revision 91c9fc8fe0
   Tools • Dart 2.13.3
+```
 
 ## Ability to
 

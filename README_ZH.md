@@ -49,10 +49,12 @@ iOS 9系统策略更新，限制了http协议的访问，此外应用需要在�
 
 ## flutter
 
-  Flutter 2.2.2 • channel stable nullsafety
-  Framework • revision d79295af24 (9 days ago) • 2021-06-11 08:56:01 -0700
-  Engine • revision 91c9fc8fe0
-  Tools • Dart 2.13.3
+``` text
+Flutter 2.2.2 • channel stable nullsafety
+Framework • revision d79295af24 (9 days ago) • 2021-06-11 08:56:01 -0700
+Engine • revision 91c9fc8fe0
+Tools • Dart 2.13.3
+```
 
 ## 能力
 
